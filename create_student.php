@@ -29,8 +29,8 @@
                               <td><input type="text" id="user_name" name="user_name"></td>
                          </tr>   
                          <tr>
-                              <td><label for="pass_word">Password</label></td>
-                              <td><input type="password" id="pass_word" name="password"></td>
+                              <td><label for="password">Password</label></td>
+                              <td><input type="password" id="password" name="password"></td>
                          </tr>
                          <tr>
                               <td><label for="e_mail">E-mail</label></td>
