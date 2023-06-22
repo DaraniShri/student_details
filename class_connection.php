@@ -23,5 +23,5 @@ class dbconnection{
      }
 }
 
-
+$class_db=new dbconnection();
 ?>

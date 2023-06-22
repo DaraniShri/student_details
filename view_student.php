@@ -28,7 +28,7 @@
                <tbody>
                     <?php
                          include 'class_connection.php';
-                         $class_db=new dbconnection();//class obj
+                         //class obj
                          $dbstatus=$class_db->getdbconnection();//function call
 
                          $result=mysqli_query($dbstatus,"select * from registration;");
