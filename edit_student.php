@@ -1,9 +1,27 @@
 <?php
-     include('store_student.php');
+     include 'class_connection.php';
+     $db_connection=$class_db->getdbconnection();
+     if($_SERVER['REQUEST_METHOD']=='GET'){
+          if(!isset($_GET['id'])){
+               header("location:/view_student.php");
+               exit;
+          }
+          $id=$_GET["id"];
+          $sql_query="select * from registration where id=$id";
+          $result=$db_connection->query($sql_query);
+          $row=$result->fetch_assoc();
+          if(!$row){
+               header("location:/view_student.php");
+               exit;
+          }
+          $name=$row['username'];
+          $password=$row['password'];
+          $email=$row['email'];
+     }
 ?>
 <html>
      <head>
-          <title>Student Details</Details></title>
+          <title>Student Details</title>
           <style>
                .container{
                     align-items:center;
@@ -21,8 +39,9 @@
           </style>
      </head>
      <body>
-          <div class="container">
+          <div class="container"> 
                <form action="store_student.php" method="POST">
+                    <input type="hidden" >
                     <table>
                          <tr>
                               <td><label for="user_name">Username</label></td>
