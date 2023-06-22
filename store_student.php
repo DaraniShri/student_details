@@ -1,13 +1,12 @@
 <?php
+      include 'class_connection.php';
      if(isset($_POST['submit'])){
-          $conn=mysqli_connect("localhost","root","","student");
-          if ($conn->connect_error) {
-               die("Connection failed: ". $conn->connect_error);
-          }
+          $class_db=new dbconnection();//class obj
+          $dbstatus=$class_db->getdbconnection();
           $name=$_POST['user_name'];
-          $password=$_POST['pasword'];
+          $password=$_POST['password'];
           $email=$_POST['e_mail'];
-          mysqli_query($conn,"insert into registration(username,password,email) values ('$name','$password','$email');");
+          mysqli_query($dbstatus,"insert into registration(username,password,email) values ('$name','$password','$email');");
           echo "Inserted successfully";
      }
 ?>

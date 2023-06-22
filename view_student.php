@@ -27,13 +27,13 @@
                </thead>
                <tbody>
                     <?php
-                         $conn=mysqli_connect("localhost","root","","student");
-                         if ($conn->connect_error) {
-                              die("Connection failed: ". $conn->connect_error);
-                         }
-                         $result=mysqli_query($conn,"select * from registration;");
+                         include 'class_connection.php';
+                         $class_db=new dbconnection();//class obj
+                         $dbstatus=$class_db->getdbconnection();//function call
+
+                         $result=mysqli_query($dbstatus,"select * from registration;");
                          if(!$result){
-                              die("Invalid query: ". $conn->connect_error);
+                              die("Invalid query: ". $dbstatus->connect_error);
                          }
                          while($row=$result->fetch_assoc()){
                               echo "<tr>
