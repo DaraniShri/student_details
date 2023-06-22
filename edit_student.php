@@ -35,13 +35,11 @@
                .container label{
                     background-color:white;
                }
-
           </style>
      </head>
      <body>
           <div class="container"> 
-               <form action="store_student.php" method="POST">
-                    <input type="hidden" >
+               <form action="update_student.php" method="POST">
                     <table>
                          <tr>
                               <td><label for="user_name">Username</label></td>
@@ -56,7 +54,7 @@
                               <td><input type="email" id="e_mail" name="e_mail"></td>
                          </tr>
                          <tr>
-                              <td colspan="2"><input type="submit" value="submit" name="submit"></td>
+                              <td colspan="2"><input type="submit" value="update" name="submit"></td>
                          </tr>
                     </table>
                </form> 

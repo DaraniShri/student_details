@@ -1,7 +1,6 @@
 <?php
       include 'class_connection.php';
      if(isset($_POST['submit'])){
-          
           $db_connection=$class_db->getdbconnection();
           $name=$_POST['user_name'];
           $password=$_POST['password'];

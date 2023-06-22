@@ -45,8 +45,7 @@
                                              <a href='delete_student.php?id=$row[id]'>Delete</a>
                                         </td>
                                    </tr>";
-                         }
-                         
+                         } 
                     ?>
                </tbody>
           </table>
