@@ -5,7 +5,16 @@
           $name=$_POST['user_name'];
           $password=$_POST['password'];
           $email=$_POST['e_mail'];
-          mysqli_query($db_connection,"insert into registration(username,password,email) values ('$name','$password','$email');");
+          $gender=$_POST['gender'];
+          $skills=$_POST['skills'];
+          $skill_array="";
+          foreach($skills as $key){
+               $skill_array .= $key.",";
+          }
+          $city=$_POST["cities"];
+          mysqli_query($db_connection,"insert into registration".
+          "(username,password,email,gender,skills,city) values ".
+          "('$name','$password','$email','$gender','$skill_array','$city');");
           echo "Inserted successfully";
      }
 ?>

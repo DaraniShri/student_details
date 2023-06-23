@@ -4,6 +4,7 @@
           <style>
                body{
                     margin-left:500px;
+                    margin-top:200px;
                }
                .table{
                     border:1px solid black;
@@ -22,6 +23,9 @@
                          <th>Name</th>
                          <th>Password</th>
                          <th>E-mail</th>
+                         <th>Gender</th>
+                         <th>Skills</th>
+                         <th>City</th>
                          <th>Action</th>
                     </tr>
                </thead>
@@ -41,6 +45,9 @@
                                         <td>" .$row["username"]."</td>
                                         <td>" .$row["password"]."</td>
                                         <td>" .$row["email"]."</td>
+                                        <td>" .$row["gender"]."</td>
+                                        <td>" .$row["skills"]."</td>
+                                        <td>" .$row["city"]."</td>
                                         <td> <a href='edit_student.php?id=$row[id]'>Edit</a>
                                              <a href='delete_student.php?id=$row[id]'>Delete</a>
                                         </td>
