@@ -10,12 +10,6 @@ class dbconnection{
           $this->password="";
           $this->database="student";
           $connection=mysqli_connect($this->servername,$this->username,$this->password,$this->database);
-          if($connection){
-               echo "Connected successfully";
-          }
-          else{
-               echo "Not connected to database";
-          }
           return $connection;
      }
 }

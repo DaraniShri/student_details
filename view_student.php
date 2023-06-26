@@ -1,19 +1,7 @@
 <html>
      <head>
           <title>View student Details</title>
-          <style>
-               body{
-                    margin-left:500px;
-                    margin-top:200px;
-               }
-               .table{
-                    border:1px solid black;
-                    padding:20px;
-               }
-               .table thead{
-                    text-decoration-line:underline;
-               }
-          </style>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
      </head>
      <body>
           <table class="table">
@@ -21,11 +9,8 @@
                     <tr>
                          <th>ID</th>
                          <th>Name</th>
-                         <th>Password</th>
                          <th>E-mail</th>
-                         <th>Gender</th>
-                         <th>Skills</th>
-                         <th>City</th>
+                         <th width="40%">Skills</th>
                          <th>Action</th>
                     </tr>
                </thead>
@@ -43,13 +28,10 @@
                               echo "<tr>
                                         <td>" .$row["id"]."</td>
                                         <td>" .$row["username"]."</td>
-                                        <td>" .$row["password"]."</td>
                                         <td>" .$row["email"]."</td>
-                                        <td>" .$row["gender"]."</td>
                                         <td>" .$row["skills"]."</td>
-                                        <td>" .$row["city"]."</td>
-                                        <td> <a href='edit_student.php?id=$row[id]'>Edit</a>
-                                             <a href='delete_student.php?id=$row[id]'>Delete</a>
+                                        <td> <a class='btn btn-primary' href='edit_student.php?id=$row[id]' role='button'>Edit</a>
+                                             <a class='btn btn-danger' href='delete_student.php?id=$row[id]' role='button'>Delete</a>
                                         </td>
                                    </tr>";
                          } 
