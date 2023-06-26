@@ -26,12 +26,14 @@
                     <input type="radio" class="form-check-input" name="gender" value="male">male
                     <input type="radio" class="form-check-input" name="gender" value="female">female
                </div>
-               <div class="check-box">
-                    <label for="skills[]">Skills</label>
-                    <input type="checkbox" name="skills[]" value="java">java
-                    <input type="checkbox" name="skills[]" value="js">js
-                    <input type="checkbox" name="skills[]" value="php">php
-                    <input type="checkbox" name="skills[]" value="css">css
+               <div class="form-group">
+                    <div class="check-box">
+                         <label for="skills[]">Skills</label>
+                         <input type="checkbox" name="skills[]" value="java">java
+                         <input type="checkbox" name="skills[]" value="js">js
+                         <input type="checkbox" name="skills[]" value="php">php
+                         <input type="checkbox" name="skills[]" value="css">css
+                    </div>
                </div>
                <div class="form-group">
                     <label for="cities">City</label>
