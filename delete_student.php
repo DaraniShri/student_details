@@ -1,5 +1,5 @@
 <?php
-     include 'class_connection.php';
+     include 'db/class_connection.php';
      if(isset($_GET["id"])){
           $id=$_GET["id"];
           $db_connection=$class_db->getdbconnection();

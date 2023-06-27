@@ -1,5 +1,5 @@
 <?php
-     include('store_student.php');
+     include('../store_student.php');
 ?>
 <html>
      <head>
@@ -22,7 +22,7 @@
                <div class="col-2">
                </div>
                <div class="col-8">
-                    <form class="form-horizontal" action="store_student.php" method="POST">
+                    <form class="form-horizontal" action="../store_student.php" method="POST">
                          <div class="form-group">
                               <label class="control-label col-sm-2" for="user_name">Username:</label>
                               <div class="col-sm-4">
@@ -64,8 +64,7 @@
                                         <option value="madurai">Madhurai</option>
                                         <option value="chennai">Chennai</option>
                                         <option value="sivakasi">Sivakasi</option>
-                                        <option value="sivakasi">Theni</option>
-                                        <option value="sivakasi">Kaasi</option>
+                                        <option value="theni">Theni</option>
                                    </select> 
                               </div>
                          </div>
