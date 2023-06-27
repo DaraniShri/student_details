@@ -13,31 +13,31 @@
                }
           </style>
      </head>
-<body>
+     <body>
      <div class="container">
           <div class="row">
                <div class="col-4">
                </div>
                <div class="col-4">
-               <form class="form-horizontal" action="validate_student.php" method="POST">
-               <div class="form-group">
-                    <label class="control-label col-sm-2" for="user_name">Username:</label>
-                    <div class="col-sm-4">
-                         <input type="text" class="form-control" id="user_name" placeholder="Enter username" name="user_name">
-                    </div>
-               </div>
-               <div class="form-group">
-                    <label class="control-label col-sm-2" for="password">Password:</label>
-                    <div class="col-sm-4">          
-                         <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
-                    </div>
-               </div>
-               <div class="form-group">        
-                    <div class="col-sm-offset-2 col-sm-4">
-                         <input class="btn btn-success" type="submit" value="submit" name="submit">
-                    </div>
-               </div>
-               </form>
+                    <form class="form-horizontal" action="validate_student.php" method="POST">
+                         <div class="form-group">
+                              <label class="control-label col-sm-2" for="user_name">Username:</label>
+                              <div class="col-sm-4">
+                                   <input type="text" class="form-control" id="user_name" placeholder="Enter username" name="user_name">
+                              </div>
+                         </div>
+                         <div class="form-group">
+                              <label class="control-label col-sm-2" for="password">Password:</label>
+                              <div class="col-sm-4">          
+                                   <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+                              </div>
+                         </div>
+                         <div class="form-group">        
+                              <div class="col-sm-offset-2 col-sm-4">
+                                   <input class="btn btn-success" type="submit" value="submit" name="submit">
+                              </div>
+                         </div>
+                    </form>
                </div>
                <div class="col-4">
                </div>
