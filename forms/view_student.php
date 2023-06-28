@@ -27,7 +27,7 @@
                               </thead>
                               <tbody>
                                    <?php
-                                        include 'db/class_connection.php';
+                                        include '../db/class_connection.php';
                                         //class obj
                                         $db_connection=$class_db->getdbconnection();//function call
 
@@ -43,7 +43,7 @@
                                                        <td>" .$row["skills"]."</td>
                                                        <td>" .$row["city"]."</td>
                                                        <td> <a class='btn btn-primary' href='./forms/edit_student.php?id=$row[id]' role='button'>Edit</a>
-                                                            <a class='btn btn-danger' href='delete_student.php?id=$row[id]' role='button'>Delete</a>
+                                                            <a class='btn btn-danger' href='../delete_student.php?id=$row[id]' role='button'>Delete</a>
                                                        </td>
                                                   </tr>";
                                         } 

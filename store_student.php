@@ -1,7 +1,6 @@
 <?php
-      include 'db/class_connection.php';
-     if(isset($_POST['submit'])){
-          $db_connection=$class_db->getdbconnection();
+     include 'class/class_student.php';
+     if(isset($_POST['submit'])){  
           $name=$_POST['user_name'];
           $password=$_POST['password'];
           $hash_password=password_hash($password, PASSWORD_DEFAULT);
@@ -13,9 +12,6 @@
                $skill_array .= $key.",";
           }
           $city=$_POST["cities"];
-          mysqli_query($db_connection,"insert into registration".
-          "(username,password,email,gender,skills,city) values ".
-          "('$name','$hash_password','$email','$gender','$skill_array','$city');");
-          echo "Inserted successfully";
-     }
+          $insert_call=$student_details->insertStudent($name,$hash_password,$email,$gender,$skill_array,$city); 
+      }
 ?>

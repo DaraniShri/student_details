@@ -6,6 +6,6 @@
           mysqli_query($db_connection,"delete from registration where id=$id");
           echo "Deleted successfully";
      }
-     header("location:/view_student.php");
+     header("location:/forms/view_student.php");
      exit;
 ?>
