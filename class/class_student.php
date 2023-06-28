@@ -15,13 +15,10 @@
           }
           public function insertStudent($name,$hash_password,$email,$gender,$skill_array,$city)
           {
-                
                $insert_query=mysqli_query($this->db_connection,"insert into registration".
                "(username,password,email,gender,skills,city) values ".
                "('$name','$hash_password','$email','$gender','$skill_array','$city');");
-               if($insert_query){
-                    echo "Inserted successfully";
-               }
+               return $insert_query;
           }
      }
      global $student_details;

@@ -13,5 +13,8 @@
           }
           $city=$_POST["cities"];
           $insert_call=$student_details->insertStudent($name,$hash_password,$email,$gender,$skill_array,$city); 
-      }
+          if($insert_query){
+               echo "Inserted successfully";
+          }
+     }
 ?>
