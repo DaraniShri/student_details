@@ -1,5 +1,5 @@
 <?php
-     include 'db/class_connection.php';
+     include 'class/class_student.php';
      if(isset($_POST["id"])){
           $id=$_POST["id"];
           $name=$_POST["user_name"];
@@ -8,13 +8,11 @@
           $skills=$_POST["skills"];
           $skills_update=implode(",",$skills);
           $city=$_POST["cities"];
-          $db_connection=$class_db->getdbconnection();
-          $test=mysqli_query($db_connection,"update registration set username='$name', email='$email', skills='$skills_update', city='$city' where id=$id");
-          if(!$test){
-               echo "invalid query";
+          $isUpdated=$student_details->updateStudent($id,$name,$email,$gender,$skills_update,$city); 
+          if($isUpdated){
+               echo "Updated successfully";
           }
-          echo "Updated successfully";
      }
-     header("location:/view_student.php");
+     header("location:/forms/view_student.php");
      exit;
 ?>

@@ -13,15 +13,17 @@
           .container{
                margin-top:150px;
                border:2px solid black;
+               padding: 60px;
+               padding-left:290px;
           }
      </style>
      </head>
      <body>
      <div class="container">
           <div class="row">
-               <div class="col-2">
+               <div class="col-4">
                </div>
-               <div class="col-8">
+               <div class="col-4">
                     <form class="form-horizontal" action="../store_student.php" method="POST">
                          <div class="form-group">
                               <label class="control-label col-sm-2" for="user_name">Username:</label>
@@ -75,7 +77,7 @@
                          </div>
                     </form> 
                </div>
-               <div class="col-2">
+               <div class="col-4">
                </div>     
           </div>
      </div>              
