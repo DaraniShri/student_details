@@ -4,12 +4,40 @@
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
           <style>
                .container{
-                    margin-top:100px;
+                    margin-top:50px;
+               }
+               .row{
+                    border:2px solid black;
+                    padding:30px;
+               }
+               .container .headers{
+                    margin-bottom:20px;
+                    border:1px solid;
+                    box-shadow:5px 10px #888888;
+                    position:relative;
+               }
+               .container .headers header{
+                    font-family:cursive;
+                    font-weight:bold;
+                    font-size:60px;
+                    text-align:center;
+               }
+               .container .headers a{
+                    position:absolute;
+                    top:0;
+                    right:0;
                }
           </style>
      </head>
      <body>
           <div class="container">
+               <div class="headers">
+                    <header>Student Details</header>
+                    <a href="login_student.php" class="btn btn-primary">Log out</a>
+               </div>
+               <div class="menu">
+                    <a href="create_student.php" class="btn btn-success">Add</a>
+               </div>
                <div class="row">
                     <div class="col-4">
                     </div>
@@ -27,10 +55,8 @@
                               </thead>
                               <tbody>
                                    <?php
-                                        include '../db/class_connection.php';
-                                        //class obj
-                                        $db_connection=$class_db->getdbconnection();//function call
-
+                                        include '../db/class_connection.php';                               
+                                        $db_connection=$class_db->getdbconnection();
                                         $result=mysqli_query($db_connection,"select * from registration;");
                                         if(!$result){
                                              die("Invalid query: ". $db_connection->connect_error);
@@ -53,6 +79,8 @@
                     </div>
                     <div class="col-4">
                     </div>
+               </div>
+               <div class="footers">
                </div>
           </div>
      </body>

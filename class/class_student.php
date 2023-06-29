@@ -1,10 +1,10 @@
 <?php
-     include_once $_SERVER['DOCUMENT_ROOT']."/db/class_connection.php";
+     include 'C:\xampp\htdocs\db\class_connection.php';
      class student{
           public $db_connection;
           public function __construct(){
-               $class_test = new dbconnection();
-               $this->db_connection=$class_test->getdbconnection();
+               global $class_db;
+               $this->db_connection=$class_db->getdbconnection();
                if(!$this->db_connection){
                     echo "Something went wrong check your connection...";
                }

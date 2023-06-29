@@ -1,5 +1,5 @@
 <?php
-     include 'class/class_student.php';
+     include './class/class_student.php';
      if(isset($_POST["id"])){
           $id=$_POST["id"];
           $name=$_POST["user_name"];

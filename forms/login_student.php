@@ -7,10 +7,15 @@
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
           <style>
-               .container{
-                    margin-top:200px;
-                    border:1px solid black;
-               }
+          .container{
+               margin-top:150px;
+               border:2px solid black;
+               padding: 60px;
+               padding-left:290px;
+          }
+          h2{
+               text-align:left;
+          }
           </style>
      </head>
      <body>
@@ -19,6 +24,7 @@
                <div class="col-4">
                </div>
                <div class="col-4">
+                    <h2>Student Login</h2>
                     <form class="form-horizontal" action="validate_student.php" method="POST">
                          <div class="form-group">
                               <label class="control-label col-sm-2" for="user_name">Username:</label>
@@ -34,7 +40,7 @@
                          </div>
                          <div class="form-group">        
                               <div class="col-sm-offset-2 col-sm-4">
-                                   <input class="btn btn-success" type="submit" value="submit" name="submit">
+                                   <input class="btn btn-success" type="submit" value="LOGIN" name="submit">
                               </div>
                          </div>
                     </form>
