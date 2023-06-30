@@ -25,7 +25,7 @@
                </div>
                <div class="col-4">
                     <h2>Student Login</h2>
-                    <form class="form-horizontal" action="validate_student.php" method="POST">
+                    <form class="form-horizontal" action="../validate_student.php" method="POST">
                          <div class="form-group">
                               <label class="control-label col-sm-2" for="user_name">Username:</label>
                               <div class="col-sm-4">
