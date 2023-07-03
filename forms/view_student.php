@@ -3,26 +3,7 @@
           <title>View student Details</title>
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
           <style>
-               .container{
-                    margin-top:50px;
-               }
-               .row{
-                    border:2px solid black;
-                    padding:30px;
-               }
-               .container .headers{
-                    margin-bottom:20px;
-                    border:2px solid;
-                    box-shadow:5px 10px #888888;
-                    position:relative;
-               }
-               .container .headers header{
-                    font-family:cursive;
-                    font-weight:bold;
-                    font-size:60px;
-                    text-align:center;
-               }
-               .container .headers a{
+               .container .log a{
                     position:absolute;
                     top:0;
                     right:0;
@@ -31,24 +12,16 @@
      </head>
      <body>
      <?php
+          require '..\common\header.html';
           session_start();
-          if(!isset($_SESSION['username'])){
+          if(!isset($_SESSION['username']))
+          {
                header("location: login_student.php");
           }
      ?>
      <div class="container">
-          <div class="headers">
-               <header>Student Details</header>
+          <div class="log">
                <a href="../logout_student.php" class="btn btn-primary">Log out</a>
-          </div>
-          <div class="menu">
-               <?php
-                    if(isset($_SESSION['username'])){
-                         if($_SESSION['username']=="admin"){
-                              echo "<a href='create_student.php' class='btn btn-success'>Add</a>";
-                         }
-                    }
-               ?>
           </div>
           <div class="row">
                <div class="col-4">
@@ -104,7 +77,6 @@
                                                   }                                             
                                              }  
                                         }
-
                                    }                            
                               ?>
                          </tbody>
@@ -113,8 +85,9 @@
                <div class="col-4">
                </div>
           </div>
-          <div class="footers">
-          </div>
      </div>
+     <?php
+               require '..\common\footer.html';
+     ?>
      </body>
 </html>

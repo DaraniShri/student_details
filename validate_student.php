@@ -20,7 +20,7 @@ include 'db/class_connection.php';
                               session_start();
                               $_SESSION['isLogin']=true;
                               $_SESSION['username']=$username;
-                              header("location: forms/view_student.php");
+                              header("location: forms/dashboard.php");
                          }
                          else{
                               echo "Wrong password";

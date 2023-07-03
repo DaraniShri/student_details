@@ -1,5 +1,9 @@
 <?php
      include('../store_student.php');
+     session_start();
+     if(!isset($_SESSION['username'])){
+          header("location: login_student.php");
+     }
 ?>
 <html>
      <head>
@@ -11,14 +15,17 @@
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
           <style>
           .container{
-               margin-top:150px;
                border:2px solid black;
-               padding: 60px;
-               padding-left:290px;
+          }
+          #back{
+               text-align:center;
           }
      </style>
      </head>
      <body>
+     <?php
+          require '..\common\header.html';
+     ?>
      <div class="container">
           <div class="row">
                <div class="col-4">
@@ -80,6 +87,14 @@
                <div class="col-4">
                </div>     
           </div>
-     </div>              
+     </div> 
+     <div class="form-group">        
+          <div class="col-sm-offset-2 col-sm-4" id="back">
+               <a href="dashboard.php" class="btn btn-primary">Back</a>
+          </div>
+     </div>  
+     <?php
+          require '..\common\footer.html';
+     ?>           
      </body> 
 </html>
