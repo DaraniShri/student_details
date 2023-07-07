@@ -13,8 +13,7 @@
      else{
           $responseArray=array(
                'success' => 0,
-               'message'=>"Student ".$student_id+" cannot be deleted"); 
+               'message'=>"Student ".$student_id." cannot be deleted"); 
           echo json_encode($responseArray);
-     }
-   
+     }  
 ?>

@@ -50,22 +50,22 @@
                          if(isset($_SESSION['username'])){  
                               if($_SESSION['username']=="admin" && $_SESSION['isLogin']==true){                                      
                                    while($row=$result->fetch_assoc()){                                                                                     
-                                             echo "<tr>
-                                                       <td>" .$row["id"]."</td>
-                                                       <td>" .$row["username"]."</td>
-                                                       <td>" .$row["email"]."</td>
-                                                       <td>" .$row["skills"]."</td>
-                                                       <td>" .$row["city"]."</td>
-                                                       <td> <a class='btn btn-primary' href='edit_student.php?id=$row[id]' role='button'>Edit</a>
-                                                       <button type='button' name='del_button' id='del_button' data-student-Id=".$row['id'].">Delete</button>
-                                                       </td>
-                                                  </tr>";                                              
+                                        echo "<tr name='table-row' 'id=".$row["id"]."'>
+                                                  <td>" .$row["id"]."</td>
+                                                  <td>" .$row["username"]."</td>
+                                                  <td>" .$row["email"]."</td>
+                                                  <td>" .$row["skills"]."</td>
+                                                  <td>" .$row["city"]."</td>
+                                                  <td> <a class='btn btn-primary' href='edit_student.php?id=$row[id]' role='button'>Edit</a>
+                                                  <button type='button' name='del_button' id='del_button' data-student-Id=".$row['id'].">Delete</button>
+                                                  </td>
+                                             </tr>";                                              
                                    }  
                               }
                               else{
                                    while($row=$result->fetch_assoc()){
                                         if($_SESSION['username']==$row['username'] && $_SESSION['isLogin']==true){                                                                                   
-                                             echo "<tr>
+                                             echo "<tr name='table-row' id=".$row["id"].">
                                                        <td>" .$row["id"].      "</td>
                                                        <td>" .$row["username"]."</td>
                                                        <td>" .$row["email"].   "</td>
@@ -85,11 +85,15 @@
 <script type="text/javascript">                         
 $(document).ready(function(){
      $('button[name="del_button"]').click(function(){
-          $.ajax({
+          var selectedRow=$(this).attr('data-student-Id');
+          alert(selectedRow);
+          $('#'+selectedRow).remove();
+
+          /*$.ajax({
                url: '../delete_student.php',
                type: 'POST',
                data: {
-                    student_id:$(this).attr('data-student-Id'),
+                    student_id:selectedRow,
                },
                success:function(response){
                     var jsonData = JSON.parse(response);
@@ -100,7 +104,7 @@ $(document).ready(function(){
                          alert(jsonData.message);
                     }
                }
-          });
+          });*/
      });                           
 });
 </script>
