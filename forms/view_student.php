@@ -50,7 +50,7 @@
                          if(isset($_SESSION['username'])){  
                               if($_SESSION['username']=="admin" && $_SESSION['isLogin']==true){                                      
                                    while($row=$result->fetch_assoc()){                                                                                     
-                                        echo "<tr name='table-row' 'id=".$row["id"]."'>
+                                        echo "<tr name='table-row' id=".$row["id"].">
                                                   <td>" .$row["id"]."</td>
                                                   <td>" .$row["username"]."</td>
                                                   <td>" .$row["email"]."</td>
@@ -86,10 +86,10 @@
 $(document).ready(function(){
      $('button[name="del_button"]').click(function(){
           var selectedRow=$(this).attr('data-student-Id');
-          alert(selectedRow);
+          console.log($('#'+selectedRow));
           $('#'+selectedRow).remove();
 
-          /*$.ajax({
+          $.ajax({
                url: '../delete_student.php',
                type: 'POST',
                data: {
@@ -104,7 +104,7 @@ $(document).ready(function(){
                          alert(jsonData.message);
                     }
                }
-          });*/
+          });
      });                           
 });
 </script>
